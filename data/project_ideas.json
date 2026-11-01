@@ -1,0 +1,234 @@
+{
+  "3-3-Volt-Battery": [
+    {"rank": 1, "name": "Pencatat tegangan baterai portabel", "description": "Baca tegangan baterai secara berkala dan catat perubahan selama pemakaian tanpa mencoba mengisi baterai.", "components": ["Baterai 3,3 V (label dataset)", "Arduino Uno", "LCD Display", "Resistor"]},
+    {"rank": 2, "name": "Indikator kondisi baterai bertegangan rendah", "description": "Buat indikator sederhana yang memberi peringatan saat tegangan turun melewati ambang yang sudah diverifikasi untuk jenis baterai.", "components": ["Baterai 3,3 V (label dataset)", "LED", "Resistor", "Buzzer"]}
+  ],
+  "7-Segment-Display": [
+    {"rank": 1, "name": "Penghitung putaran motor", "description": "Tampilkan hitungan pulsa sensor putaran pada display tujuh segmen dengan pembaruan angka yang mudah dibaca.", "components": ["Display 7 Segmen", "Arduino Uno", "Sensor Reflektif TCRT5000", "Resistor"]},
+    {"rank": 2, "name": "Timer hitung mundur meja", "description": "Buat timer sederhana dengan tombol untuk mengatur durasi dan display tujuh segmen sebagai penunjuk sisa waktu.", "components": ["Display 7 Segmen", "Arduino Uno", "Tact Switch / Tombol PCB"]}
+  ],
+  "Arduino-Mega": [
+    {"rank": 1, "name": "Stasiun pemantau banyak sensor", "description": "Gunakan banyak pin I/O untuk membaca sensor lingkungan dan tampilkan hasilnya pada layar.", "components": ["Arduino Mega", "Sensor Kelembapan", "Sensor Gas", "LCD Display"]},
+    {"rank": 2, "name": "Panel kendali aktuator multi-kanal", "description": "Buat panel prototipe untuk mengendalikan beberapa beban melalui driver yang sesuai, dengan tombol untuk tiap kanal.", "components": ["Arduino Mega", "Modul Relay", "Push Switch / Tombol Tekan", "LED"]}
+  ],
+  "Arduino-Uno": [
+    {"rank": 1, "name": "Termometer dan alarm suhu", "description": "Baca perubahan suhu dari termistor, tampilkan hasilnya, dan aktifkan buzzer saat ambang demonstrasi tercapai.", "components": ["Arduino Uno", "Termistor NTC", "LCD Display", "Buzzer", "Resistor"]},
+    {"rank": 2, "name": "Lampu otomatis berdasarkan cahaya", "description": "Ukur terang-gelap menggunakan LDR lalu kendalikan LED melalui rangkaian pembatas arus.", "components": ["Arduino Uno", "Sensor Cahaya LDR", "LED", "Resistor"]}
+  ],
+  "BJT-Transistor": [
+    {"rank": 1, "name": "Sakelar transistor untuk beban LED", "description": "Demonstrasikan BJT sebagai sakelar sisi rendah untuk mengendalikan LED dari sinyal kontrol berarus kecil.", "components": ["Transistor BJT", "LED", "Resistor", "Push Switch / Tombol Tekan"]},
+    {"rank": 2, "name": "Penguat sinyal audio kecil", "description": "Rangkai tahap penguat BJT berdaya rendah untuk mempelajari bias dan perubahan sinyal; ikuti datasheet transistor yang digunakan.", "components": ["Transistor BJT", "Resistor", "Kapasitor 10mf (nilai perlu diverifikasi)", "Buzzer"]}
+  ],
+  "Bluetooth-Module": [
+    {"rank": 1, "name": "Kendali LED dari ponsel melalui Bluetooth", "description": "Kirim perintah serial nirkabel untuk menyalakan dan mematikan LED dari aplikasi terminal ponsel.", "components": ["Modul Bluetooth", "Arduino Uno", "LED", "Resistor"]},
+    {"rank": 2, "name": "Monitor sensor serial nirkabel", "description": "Kirim pembacaan sensor dari mikrokontroler ke ponsel melalui tautan serial Bluetooth.", "components": ["Modul Bluetooth", "Arduino Uno", "Sensor Kelembapan"]}
+  ],
+  "Breadboard": [
+    {"rank": 1, "name": "Papan uji sensor modular", "description": "Susun rangkaian sensor dan indikator yang bisa diubah tanpa solder untuk membandingkan hasil beberapa percobaan.", "components": ["Breadboard / Papan Rangkaian", "Sensor Cahaya LDR", "LED", "Resistor"]},
+    {"rank": 2, "name": "Prototipe gerbang logika tombol", "description": "Rakit rangkaian logika dasar dari IC yang fungsi dan pinout-nya sudah diketahui, lalu uji dengan tombol dan LED.", "components": ["Breadboard / Papan Rangkaian", "IC Chip (Integrated Circuit)", "Push Switch / Tombol Tekan", "LED"]}
+  ],
+  "Bridge-Rectifier": [
+    {"rank": 1, "name": "Demonstrasi penyearah AC tegangan rendah", "description": "Amati perubahan AC terisolasi bertegangan rendah menjadi DC beriak; gunakan batas arus dan rating komponen yang sesuai.", "components": ["Bridge Rectifier / Penyearah Jembatan", "Kapasitor 470mf (nilai perlu diverifikasi)", "Resistor", "LED"]},
+    {"rank": 2, "name": "Perbandingan bentuk gelombang penyearah", "description": "Bandingkan keluaran sebelum dan sesudah penyearah jembatan pada rangkaian uji tegangan rendah menggunakan alat ukur yang sesuai.", "components": ["Bridge Rectifier / Penyearah Jembatan", "Kapasitor 10mf (nilai perlu diverifikasi)", "Breadboard / Papan Rangkaian"]}
+  ],
+  "Buck-Converter": [
+    {"rank": 1, "name": "Suplai DC step-down untuk prototipe", "description": "Turunkan sumber DC yang tegangannya sesuai ke tegangan kerja rangkaian, lalu ukur keluaran tanpa melampaui batas input, arus, dan pendinginan modul.", "components": ["Buck Converter (DC-DC Step-Down)", "Catu DC sesuai spesifikasi modul", "Multimeter"]},
+    {"rank": 2, "name": "Catu LED dengan tegangan teratur", "description": "Gunakan keluaran step-down yang telah diverifikasi untuk memberi suplai pada beban LED berarus rendah.", "components": ["Buck Converter (DC-DC Step-Down)", "LED", "Resistor", "Kapasitor 470mf (nilai perlu diverifikasi)"]}
+  ],
+  "Buzzer": [
+    {"rank": 1, "name": "Alarm pintu berbasis tombol", "description": "Aktifkan bunyi saat tombol sensor pintu berubah keadaan dan sediakan tombol untuk membisukan alarm.", "components": ["Buzzer", "Push Switch / Tombol Tekan", "Arduino Uno"]},
+    {"rank": 2, "name": "Peringatan jarak dekat", "description": "Buat indikator bunyi yang berubah saat objek mendekati sensor jarak, dengan ambang yang dapat disetel.", "components": ["Buzzer", "Sensor Jarak Ultrasonik", "Arduino Uno", "Potensiometer Taper"]}
+  ],
+  "Capacitor-10mf": [
+    {"rank": 1, "name": "Eksperimen konstanta waktu RC", "description": "Amati proses pengisian dan pengosongan kapasitor dalam rangkaian RC; verifikasi dulu apakah label nilai berarti mF atau µF.", "components": ["Kapasitor 10mf (nilai perlu diverifikasi)", "Resistor", "LED", "Breadboard / Papan Rangkaian"]},
+    {"rank": 2, "name": "Peredam riak pada catu tegangan rendah", "description": "Bandingkan riak keluaran rangkaian DC tegangan rendah dengan dan tanpa kapasitor yang rating serta nilainya sudah dipastikan.", "components": ["Kapasitor 10mf (nilai perlu diverifikasi)", "Bridge Rectifier / Penyearah Jembatan", "Multimeter"]}
+  ],
+  "Capacitor-470mf": [
+    {"rank": 1, "name": "Penyimpan energi untuk LED sesaat", "description": "Uji lama nyala LED setelah suplai diputus pada rangkaian tegangan rendah; pastikan polaritas, nilai, dan rating kapasitor.", "components": ["Kapasitor 470mf (nilai perlu diverifikasi)", "LED", "Resistor", "Push Switch / Tombol Tekan"]},
+    {"rank": 2, "name": "Perata keluaran penyearah tegangan rendah", "description": "Bandingkan keluaran DC sebelum dan sesudah kapasitor perata pada sumber AC terisolasi bertegangan rendah.", "components": ["Kapasitor 470mf (nilai perlu diverifikasi)", "Bridge Rectifier / Penyearah Jembatan", "Resistor"]}
+  ],
+  "DC-Motor": [
+    {"rank": 1, "name": "Kipas meja mini dengan kendali kecepatan", "description": "Atur kecepatan motor DC menggunakan driver yang sesuai dan suplai yang mampu menangani arus awal motor.", "components": ["Motor DC", "Driver Motor", "Potensiometer Taper", "Catu DC sesuai spesifikasi motor"]},
+    {"rank": 2, "name": "Robot roda dua maju-mundur", "description": "Uji kendali arah dua motor dengan driver H-bridge; jangan hubungkan motor langsung ke pin mikrokontroler.", "components": ["Motor DC", "Driver Motor", "Arduino Uno", "Breadboard / Papan Rangkaian"]}
+  ],
+  "Diode": [
+    {"rank": 1, "name": "Proteksi polaritas terbalik tegangan rendah", "description": "Demonstrasikan diode seri sebagai proteksi polaritas pada rangkaian LED tegangan rendah dan amati penurunan tegangannya.", "components": ["Dioda", "LED", "Resistor", "Baterai 3,3 V (label dataset)"]},
+    {"rank": 2, "name": "Peredam tegangan balik kumparan", "description": "Pasang diode flyback pada kumparan relay DC untuk menunjukkan jalur arus induktif saat sakelar dimatikan.", "components": ["Dioda", "Modul Relay", "Transistor BJT", "Resistor"]}
+  ],
+  "ESP32": [
+    {"rank": 1, "name": "Dasbor sensor kelembapan melalui Wi-Fi", "description": "Kirim pembacaan sensor ke halaman web lokal melalui Wi-Fi dan tampilkan status koneksi.", "components": ["Papan ESP32", "Sensor Kelembapan", "OLED Display"]},
+    {"rank": 2, "name": "Kontrol lampu lokal dari browser", "description": "Buat antarmuka web lokal untuk mengendalikan LED melalui pin keluaran; gunakan resistor pembatas dan perhatikan level logika.", "components": ["Papan ESP32", "LED", "Resistor", "Breadboard / Papan Rangkaian"]}
+  ],
+  "ESP32-CAM": [
+    {"rank": 1, "name": "Pemantau kamera dengan penyimpanan foto", "description": "Ambil gambar berkala dari kamera dan simpan ke microSD jika varian papan mendukungnya.", "components": ["Papan ESP32-CAM", "Kartu microSD", "Catu daya stabil sesuai spesifikasi papan"]},
+    {"rank": 2, "name": "Kamera pemantau dengan deteksi gerak", "description": "Gunakan sensor gerak untuk memicu pengambilan gambar; pastikan suplai mampu memasok arus puncak modul kamera dan Wi-Fi.", "components": ["Papan ESP32-CAM", "Sensor Gerak", "Kartu microSD"]}
+  ],
+  "FT-232-USB-Serial-Module": [
+    {"rank": 1, "name": "Konsol serial untuk debugging mikrokontroler", "description": "Pantau log dan kirim perintah teks antara komputer dan papan yang memakai UART TTL.", "components": ["Modul USB ke Serial FT232", "Arduino Uno", "Breadboard / Papan Rangkaian"]},
+    {"rank": 2, "name": "Perekam data serial ke komputer", "description": "Kirim pembacaan sensor berkala melalui UART untuk disimpan sebagai log di komputer.", "components": ["Modul USB ke Serial FT232", "Sensor Kelembapan", "Arduino Uno"]}
+  ],
+  "Film-Capacitor": [
+    {"rank": 1, "name": "Filter audio pasif untuk eksperimen", "description": "Susun filter RC sederhana dan bandingkan respons frekuensi; verifikasi nilai kapasitor film dan gunakan sinyal uji kecil.", "components": ["Kapasitor Film", "Resistor", "Breadboard / Papan Rangkaian"]},
+    {"rank": 2, "name": "Jaringan timing RC stabil", "description": "Bandingkan waktu tunda beberapa kombinasi resistor dan kapasitor film pada rangkaian tegangan rendah.", "components": ["Kapasitor Film", "Resistor", "LED", "IC Chip (Integrated Circuit)"]}
+  ],
+  "Fuse": [
+    {"rank": 1, "name": "Demonstrasi proteksi arus berlebih", "description": "Uji sekring pada rangkaian DC tegangan rendah dengan sumber terbatas arus dan beban uji; pilih rating berdasarkan datasheet.", "components": ["Sekring / Fuse", "Dudukan Sekring", "Resistor", "LED"]},
+    {"rank": 2, "name": "Panel uji sekring yang dapat diganti", "description": "Buat panel edukasi yang menunjukkan jalur rangkaian terbuka saat sekring putus, tanpa memakai tegangan listrik rumah.", "components": ["Sekring / Fuse", "Dudukan Sekring", "Push Switch / Tombol Tekan", "LED"]}
+  ],
+  "Fuse-Base": [
+    {"rank": 1, "name": "Modul distribusi DC dengan sekring lepas-pasang", "description": "Rakit jalur suplai tegangan rendah dengan sekring yang mudah diganti dan diberi label untuk tiap cabang.", "components": ["Dudukan Sekring", "Sekring / Fuse", "Rocker Switch / Sakelar Jungkit", "LED"]},
+    {"rank": 2, "name": "Tester kontinuitas dudukan sekring", "description": "Buat pemeriksa sederhana untuk memastikan kontak dudukan dan sekring tersambung sebelum dipasang ke rangkaian.", "components": ["Dudukan Sekring", "Sekring / Fuse", "Buzzer", "Baterai 3,3 V (label dataset)"]}
+  ],
+  "GSM-Module": [
+    {"rank": 1, "name": "Peringatan sensor lewat SMS", "description": "Kirim SMS saat sensor mencapai ambang tertentu; gunakan SIM dan antena yang sesuai serta suplai stabil sesuai kebutuhan modul.", "components": ["Modul GSM / Seluler", "Arduino Uno", "Sensor Gas"]},
+    {"rank": 2, "name": "Pelapor status catu jarak jauh", "description": "Kirim pesan status berkala dari sistem pemantau dan tangani kegagalan jaringan tanpa menghambat pembacaan lokal.", "components": ["Modul GSM / Seluler", "Arduino Uno", "Buzzer"]}
+  ],
+  "Gas-Sensor": [
+    {"rank": 1, "name": "Alarm demonstrasi perubahan gas", "description": "Tampilkan perubahan keluaran sensor dan bunyikan buzzer pada ambang uji; sensor generik ini bukan alat keselamatan tersertifikasi.", "components": ["Sensor Gas", "Arduino Uno", "Buzzer", "LCD Display"]},
+    {"rank": 2, "name": "Pencatat respons sensor gas", "description": "Catat perubahan pembacaan sensor selama eksperimen berventilasi baik dan gunakan hanya bahan uji yang aman sesuai datasheet.", "components": ["Sensor Gas", "Papan ESP32", "OLED Display"]}
+  ],
+  "Heat-Sink": [
+    {"rank": 1, "name": "Perbandingan pendinginan heatsink", "description": "Bandingkan perubahan suhu komponen uji berdaya rendah dengan dan tanpa heatsink, sambil menjaga batas suhu datasheet.", "components": ["Heatsink / Pendingin Komponen", "Termistor NTC", "Arduino Uno"]},
+    {"rank": 2, "name": "Monitor suhu regulator berpendingin", "description": "Pasang sensor suhu dekat heatsink untuk memantau kestabilan termal rangkaian catu berdaya rendah.", "components": ["Heatsink / Pendingin Komponen", "Termistor NTC", "LCD Display", "Resistor"]}
+  ],
+  "High-Voltage-Ceramic-Capacitor": [
+    {"rank": 1, "name": "Uji karakteristik kapasitor pada tegangan rendah", "description": "Bandingkan respons kapasitor keramik dalam rangkaian RC menggunakan sinyal rendah; jangan menguji rating tegangan tinggi tanpa fasilitas dan prosedur yang tepat.", "components": ["Kapasitor Keramik Tegangan Tinggi", "Resistor", "Breadboard / Papan Rangkaian"]},
+    {"rank": 2, "name": "Peredam gangguan pada rangkaian switching rendah", "description": "Evaluasi kapasitor sebagai bagian filter/snubber hanya pada rangkaian uji berenergi rendah dengan nilai dan rating yang sudah diverifikasi.", "components": ["Kapasitor Keramik Tegangan Tinggi", "Dioda", "Resistor"]}
+  ],
+  "Humidity-Sensor": [
+    {"rank": 1, "name": "Monitor kelembapan ruangan", "description": "Tampilkan kelembapan udara dan, bila sensor mendukungnya, suhu pada layar lokal.", "components": ["Sensor Kelembapan", "Arduino Uno", "LCD Display"]},
+    {"rank": 2, "name": "Pencatat kelembapan berbasis Wi-Fi", "description": "Kirim pembacaan sensor ke dasbor lokal secara berkala dan tampilkan status jaringan.", "components": ["Sensor Kelembapan", "Papan ESP32", "OLED Display"]}
+  ],
+  "IC-Base-14-Pin": [
+    {"rank": 1, "name": "Papan uji IC DIP-14 yang dapat diganti", "description": "Buat soket prototipe agar IC DIP-14 dapat diuji dan diganti tanpa menyolder ulang; cocokkan pinout IC sebelum diberi daya.", "components": ["Soket IC 14 Pin", "Breadboard / Papan Rangkaian", "Pin Header"]},
+    {"rank": 2, "name": "Modul demonstrasi logika DIP-14", "description": "Gunakan soket untuk menguji IC logika DIP-14 yang identitas dan datasheet-nya diketahui dengan input tombol dan output LED.", "components": ["Soket IC 14 Pin", "IC Chip (Integrated Circuit)", "Push Switch / Tombol Tekan", "LED"]}
+  ],
+  "IC-Base-28-Pin": [
+    {"rank": 1, "name": "Papan prototipe mikrokontroler DIP-28", "description": "Pasang IC DIP-28 yang kompatibel pada soket untuk memudahkan pemrograman atau penggantian; ikuti pinout dan suplai datasheet.", "components": ["Soket IC 28 Pin", "Breadboard / Papan Rangkaian", "Pin Header"]},
+    {"rank": 2, "name": "Fixture uji IC DIP-28", "description": "Buat dudukan uji dengan pin akses untuk memeriksa sinyal IC DIP-28 tanpa menyolder langsung ke kaki chip.", "components": ["Soket IC 28 Pin", "Pin Header", "LED", "Resistor"]}
+  ],
+  "IC-Chip": [
+    {"rank": 1, "name": "Penguji fungsi IC berbasis datasheet", "description": "Setelah nomor IC diketahui, rangkai uji fungsi sederhana sesuai datasheet dan jangan menebak suplai atau pinout dari bentuk chip.", "components": ["IC Chip (Integrated Circuit)", "Breadboard / Papan Rangkaian", "LED", "Resistor"]},
+    {"rank": 2, "name": "Modul IC yang mudah diganti", "description": "Pasang IC pada soket yang sesuai agar rangkaian demonstrasi dapat membandingkan beberapa IC dengan fungsi dan pinout yang sudah terverifikasi.", "components": ["IC Chip (Integrated Circuit)", "Soket IC 14 Pin", "Pin Header"]}
+  ],
+  "IGBT": [
+    {"rank": 1, "name": "Demonstrasi switching IGBT tegangan rendah", "description": "Pelajari kendali gerbang dan bentuk gelombang pada beban uji tegangan rendah; gunakan driver dan batas arus sesuai datasheet.", "components": ["Transistor IGBT", "Driver Motor", "Resistor", "Breadboard / Papan Rangkaian"]},
+    {"rank": 2, "name": "Monitor suhu modul switching", "description": "Amati suhu heatsink selama uji switching berdaya rendah dan hentikan pengujian sebelum melewati batas komponen.", "components": ["Transistor IGBT", "Heatsink / Pendingin Komponen", "Termistor NTC", "LCD Display"]}
+  ],
+  "IR-Sensor": [
+    {"rank": 1, "name": "Penghitung objek pada jalur konveyor mini", "description": "Deteksi objek yang memutus atau memantulkan sinar IR lalu tampilkan jumlah hitungan.", "components": ["Sensor Inframerah (IR)", "Arduino Uno", "Display 7 Segmen"]},
+    {"rank": 2, "name": "Penerima perintah inframerah", "description": "Gunakan penerima IR yang sesuai untuk membaca tombol remote dan mengendalikan indikator LED.", "components": ["Sensor Inframerah (IR)", "Arduino Uno", "LED", "Resistor"]}
+  ],
+  "Inductor": [
+    {"rank": 1, "name": "Filter LC untuk suplai tegangan rendah", "description": "Uji peredaman riak pada rangkaian DC rendah menggunakan induktor dan kapasitor dengan arus serta nilai yang sesuai.", "components": ["Induktor", "Kapasitor 470mf (nilai perlu diverifikasi)", "Kapasitor Keramik Tegangan Rendah"]},
+    {"rank": 2, "name": "Eksperimen energi medan magnet", "description": "Amati respons arus induktor pada rangkaian switching tegangan rendah dan ukur perubahan dengan alat yang sesuai.", "components": ["Induktor", "Transistor MOSFET", "Dioda", "Resistor"]}
+  ],
+  "Keypad": [
+    {"rank": 1, "name": "Kunci kode dengan keypad matriks", "description": "Baca urutan tombol untuk membuka simulasi kunci dan berikan umpan balik melalui buzzer.", "components": ["Keypad Matriks", "Arduino Uno", "Buzzer", "LED"]},
+    {"rank": 2, "name": "Menu pengaturan perangkat", "description": "Gunakan keypad untuk mengubah ambang sensor dan tampilkan pilihan menu pada LCD.", "components": ["Keypad Matriks", "Arduino Uno", "LCD Display", "Sensor Kelembapan"]}
+  ],
+  "LCD-Display": [
+    {"rank": 1, "name": "Termometer dengan tampilan LCD", "description": "Tampilkan nilai sensor suhu dan status batas pada LCD karakter.", "components": ["LCD Display", "Arduino Uno", "Termistor NTC", "Resistor"]},
+    {"rank": 2, "name": "Panel status beberapa sensor", "description": "Buat halaman bergilir pada LCD untuk menampilkan pembacaan sensor dan status sistem.", "components": ["LCD Display", "Arduino Mega", "Sensor Gas", "Sensor Kelembapan"]}
+  ],
+  "LDR-Sensor": [
+    {"rank": 1, "name": "Lampu malam otomatis dengan LDR", "description": "Gunakan pembagi tegangan LDR untuk menyalakan LED saat kondisi sekitar gelap.", "components": ["Sensor Cahaya LDR", "LED", "Resistor", "Transistor BJT"]},
+    {"rank": 2, "name": "Perekam intensitas cahaya ruangan", "description": "Baca nilai LDR dengan mikrokontroler dan tampilkan perubahan cahaya pada layar.", "components": ["Sensor Cahaya LDR", "Arduino Uno", "OLED Display"]}
+  ],
+  "LED-Light": [
+    {"rank": 1, "name": "Panel indikator status tiga keadaan", "description": "Gunakan beberapa LED sebagai indikator daya, proses, dan peringatan dengan resistor pembatas masing-masing.", "components": ["LED", "Resistor", "Arduino Uno", "Push Switch / Tombol Tekan"]},
+    {"rank": 2, "name": "Lampu LED dengan kendali terang", "description": "Atur tingkat terang LED melalui sinyal PWM dan transistor/driver bila arus beban melebihi kemampuan pin.", "components": ["LED", "Transistor MOSFET", "Potensiometer Taper", "Arduino Uno"]}
+  ],
+  "Low-Voltage-Ceramic-Capacitor": [
+    {"rank": 1, "name": "Decoupling suplai mikrokontroler", "description": "Pasang kapasitor keramik dekat pin suplai rangkaian bertegangan rendah untuk mengamati pengurangan gangguan lokal.", "components": ["Kapasitor Keramik Tegangan Rendah", "Arduino Uno", "Breadboard / Papan Rangkaian"]},
+    {"rank": 2, "name": "Filter noise input sensor", "description": "Uji kapasitor sebagai filter sederhana pada sinyal sensor lambat dan bandingkan kestabilan pembacaan.", "components": ["Kapasitor Keramik Tegangan Rendah", "Sensor Cahaya LDR", "Resistor", "Arduino Uno"]}
+  ],
+  "MLC-Capacitor": [
+    {"rank": 1, "name": "Decoupling lokal untuk papan ESP32", "description": "Evaluasi kapasitor MLC sebagai bypass pada suplai tegangan rendah sesuai nilai dan karakteristik yang direkomendasikan papan.", "components": ["Kapasitor MLC", "Papan ESP32", "Breadboard / Papan Rangkaian"]},
+    {"rank": 2, "name": "Filter RC pembacaan sensor", "description": "Gunakan kapasitor multilapis dalam filter RC untuk meredam noise pembacaan sensor, lalu bandingkan data sebelum dan sesudah filter.", "components": ["Kapasitor MLC", "Resistor", "Sensor Kelembapan", "Arduino Uno"]}
+  ],
+  "MOSFET": [
+    {"rank": 1, "name": "Kendali kipas DC dengan MOSFET", "description": "Atur kipas DC melalui MOSFET logic-level dan sinyal PWM; verifikasi arus, tegangan, dan kebutuhan diode proteksi.", "components": ["Transistor MOSFET", "Motor DC", "Arduino Uno", "Dioda"]},
+    {"rank": 2, "name": "Sakelar LED daya rendah", "description": "Gunakan MOSFET sebagai sakelar beban LED yang dikendalikan tombol atau mikrokontroler.", "components": ["Transistor MOSFET", "LED", "Resistor", "Push Switch / Tombol Tekan"]}
+  ],
+  "Motion-Sensor": [
+    {"rank": 1, "name": "Lampu lorong otomatis berbasis gerak", "description": "Nyalakan LED selama jeda tertentu setelah sensor mendeteksi gerakan.", "components": ["Sensor Gerak", "Arduino Uno", "LED", "Resistor"]},
+    {"rank": 2, "name": "Alarm gerak dengan hitung kejadian", "description": "Bunyikan buzzer dan catat jumlah kejadian gerak untuk demonstrasi sistem pemantauan ruangan.", "components": ["Sensor Gerak", "Arduino Uno", "Buzzer", "Display 7 Segmen"]}
+  ],
+  "Motor-Driver": [
+    {"rank": 1, "name": "Kendali arah motor DC", "description": "Gunakan driver motor untuk membalik arah putaran dari perintah tombol sambil memisahkan suplai motor dari logika bila disyaratkan.", "components": ["Driver Motor", "Motor DC", "Arduino Uno", "Push Switch / Tombol Tekan"]},
+    {"rank": 2, "name": "Robot mobil dengan kecepatan terkontrol", "description": "Kendalikan dua motor melalui driver dan uji maju, mundur, serta belok dengan perintah mikrokontroler.", "components": ["Driver Motor", "Motor DC", "Papan ESP32", "Baterai 3,3 V (label dataset)"]}
+  ],
+  "NTC-Thermistor": [
+    {"rank": 1, "name": "Termometer NTC dengan kalibrasi", "description": "Ukur tegangan pembagi NTC, kalibrasikan terhadap suhu referensi, dan tampilkan hasil pada layar.", "components": ["Termistor NTC", "Resistor", "Arduino Uno", "LCD Display"]},
+    {"rank": 2, "name": "Alarm suhu berlebih untuk prototipe", "description": "Aktifkan buzzer saat suhu uji melewati ambang yang dikonfigurasi; jangan gunakan proyek ini sebagai proteksi keselamatan utama.", "components": ["Termistor NTC", "Arduino Uno", "Buzzer", "Transistor BJT"]}
+  ],
+  "OLED-Display": [
+    {"rank": 1, "name": "Dasbor mini sensor lingkungan", "description": "Tampilkan suhu dan kelembapan dalam format ringkas pada OLED.", "components": ["OLED Display", "Sensor Kelembapan", "Termistor NTC", "Arduino Uno"]},
+    {"rank": 2, "name": "Indikator status koneksi Wi-Fi", "description": "Tampilkan status jaringan serta alamat perangkat pada OLED untuk proyek IoT lokal.", "components": ["OLED Display", "Papan ESP32"]}
+  ],
+  "Pin-Header": [
+    {"rank": 1, "name": "Adaptor pin sensor ke kabel jumper", "description": "Pasang pin header pada modul prototipe agar sensor dapat dilepas-pasang dan diuji di breadboard.", "components": ["Pin Header", "Breadboard / Papan Rangkaian", "Sensor Kelembapan"]},
+    {"rank": 2, "name": "Papan breakout pin mikrokontroler", "description": "Buat breakout berlabel untuk akses pin yang sering digunakan, dengan orientasi dan fungsi pin yang diperiksa sebelum diberi daya.", "components": ["Pin Header", "Papan ESP32", "Breadboard / Papan Rangkaian"]}
+  ],
+  "Push-Switch": [
+    {"rank": 1, "name": "Penghitung tekan tombol dengan debounce", "description": "Hitung setiap penekanan tombol dengan penanganan debounce perangkat lunak dan tampilkan jumlahnya.", "components": ["Push Switch / Tombol Tekan", "Arduino Uno", "Display 7 Segmen"]},
+    {"rank": 2, "name": "Kontrol manual buzzer dan indikator", "description": "Gunakan tombol sesaat untuk mengaktifkan atau membisukan buzzer dan LED status.", "components": ["Push Switch / Tombol Tekan", "Buzzer", "LED", "Resistor"]}
+  ],
+  "RFID-Scanner": [
+    {"rank": 1, "name": "Pencatat akses kartu RFID", "description": "Baca UID kartu/tag untuk demonstrasi pencatatan akses; gunakan daftar uji lokal dan jangan jadikan UID sebagai satu-satunya kontrol keamanan.", "components": ["Modul Pembaca RFID", "Arduino Uno", "LCD Display", "Buzzer"]},
+    {"rank": 2, "name": "Penghitung kunjungan dengan kartu", "description": "Catat pemindaian kartu dan tampilkan jumlah kunjungan pada layar.", "components": ["Modul Pembaca RFID", "Arduino Uno", "Display 7 Segmen"]}
+  ],
+  "Raindrops-Module": [
+    {"rank": 1, "name": "Peringatan hujan untuk jemuran mini", "description": "Deteksi tetesan pada pelat sensor dan bunyikan alarm sebagai demonstrasi; lindungi rangkaian dari air.", "components": ["Modul Sensor Tetesan Hujan", "Arduino Uno", "Buzzer"]},
+    {"rank": 2, "name": "Pencatat kejadian hujan", "description": "Simpan status basah/kering dan tampilkan perubahan sensor pada layar atau dasbor lokal.", "components": ["Modul Sensor Tetesan Hujan", "Papan ESP32", "OLED Display"]}
+  ],
+  "Relay-Module": [
+    {"rank": 1, "name": "Kontrol beban DC tegangan rendah", "description": "Gunakan relay untuk menyakelar beban DC kecil dari mikrokontroler dan periksa rating kontak modul.", "components": ["Modul Relay", "Arduino Uno", "LED", "Push Switch / Tombol Tekan"]},
+    {"rank": 2, "name": "Otomasi pompa demonstrasi", "description": "Aktifkan relay berdasarkan ambang sensor air pada rangkaian uji tegangan rendah; gunakan hanya beban dan suplai yang aman.", "components": ["Modul Relay", "Sensor Air", "Arduino Uno", "Buzzer"]}
+  ],
+  "Resistor": [
+    {"rank": 1, "name": "Papan eksperimen pembagi tegangan", "description": "Susun beberapa nilai resistor sebagai pembagi tegangan dan ukur keluarannya dengan multimeter.", "components": ["Resistor", "Potensiometer Taper", "Multimeter", "Breadboard / Papan Rangkaian"]},
+    {"rank": 2, "name": "Papan LED dengan pilihan resistor", "description": "Bandingkan terang LED dan arus pada beberapa nilai resistor pembatas yang dihitung sesuai spesifikasi LED.", "components": ["Resistor", "LED", "Push Switch / Tombol Tekan", "Breadboard / Papan Rangkaian"]}
+  ],
+  "Rocker-Switch": [
+    {"rank": 1, "name": "Sakelar utama prototipe DC", "description": "Tambahkan sakelar rocker berlabel pada jalur suplai DC tegangan rendah dengan rating yang sesuai.", "components": ["Rocker Switch / Sakelar Jungkit", "Baterai 3,3 V (label dataset)", "LED", "Resistor"]},
+    {"rank": 2, "name": "Pemilih mode operasi manual", "description": "Gunakan sakelar rocker untuk memilih antara dua mode demonstrasi mikrokontroler dan tampilkan mode aktif.", "components": ["Rocker Switch / Sakelar Jungkit", "Arduino Uno", "LCD Display"]}
+  ],
+  "Servo-Motor": [
+    {"rank": 1, "name": "Pintu mini dengan kontrol sudut servo", "description": "Atur posisi servo menggunakan tombol buka/tutup dan batasi gerakan mekanis agar tidak membebani motor.", "components": ["Motor Servo", "Arduino Uno", "Push Switch / Tombol Tekan"]},
+    {"rank": 2, "name": "Pemindah objek dua posisi", "description": "Gerakkan lengan servo ke dua posisi untuk memindahkan objek ringan pada demonstrasi sortir.", "components": ["Motor Servo", "Arduino Uno", "Sensor Inframerah (IR)"]}
+  ],
+  "Soil-Moisture-Sensor": [
+    {"rank": 1, "name": "Penyiram tanaman otomatis skala meja", "description": "Pantau kelembapan tanah dan aktifkan pompa demonstrasi melalui driver saat tanah terdeteksi kering.", "components": ["Sensor Kelembapan Tanah", "Arduino Uno", "Modul Relay", "Buzzer"]},
+    {"rank": 2, "name": "Pencatat kelembapan media tanam", "description": "Tampilkan dan kirim tren kelembapan ke dasbor lokal; kalibrasikan sensor untuk media yang digunakan.", "components": ["Sensor Kelembapan Tanah", "Papan ESP32", "OLED Display"]}
+  ],
+  "Sonar-Sensor": [
+    {"rank": 1, "name": "Pengukur jarak digital", "description": "Ukur jarak objek dan tampilkan hasilnya pada display dengan memperhatikan batas dan orientasi sensor.", "components": ["Sensor Jarak Ultrasonik", "Arduino Uno", "Display 7 Segmen"]},
+    {"rank": 2, "name": "Peringatan mundur robot mini", "description": "Tingkatkan frekuensi bunyi buzzer saat robot mendekati penghalang.", "components": ["Sensor Jarak Ultrasonik", "Buzzer", "Arduino Uno", "Driver Motor"]}
+  ],
+  "TCRT5000": [
+    {"rank": 1, "name": "Robot pengikut garis sederhana", "description": "Baca pantulan permukaan dengan TCRT5000 untuk mengoreksi arah motor saat mengikuti garis kontras.", "components": ["Sensor Reflektif TCRT5000", "Arduino Uno", "Driver Motor", "Motor DC"]},
+    {"rank": 2, "name": "Penghitung putaran berbasis refleksi", "description": "Deteksi penanda reflektif pada piringan berputar dan hitung pulsa untuk estimasi kecepatan.", "components": ["Sensor Reflektif TCRT5000", "Arduino Uno", "Display 7 Segmen"]}
+  ],
+  "Tact-Switch": [
+    {"rank": 1, "name": "Tombol menu untuk perangkat mini", "description": "Gunakan tact switch sebagai input navigasi menu dengan debounce dan umpan balik pada OLED.", "components": ["Tact Switch / Tombol PCB", "Papan ESP32", "OLED Display"]},
+    {"rank": 2, "name": "Pengendali timer dengan tombol PCB", "description": "Atur mulai, jeda, dan reset timer menggunakan beberapa tact switch.", "components": ["Tact Switch / Tombol PCB", "Arduino Uno", "Display 7 Segmen"]}
+  ],
+  "Taper-Potentiometer": [
+    {"rank": 1, "name": "Pengatur terang LED analog", "description": "Baca posisi potensiometer sebagai nilai kendali lalu ubah duty cycle LED melalui PWM.", "components": ["Potensiometer Taper", "Arduino Uno", "LED", "Resistor"]},
+    {"rank": 2, "name": "Setelan ambang alarm sensor", "description": "Gunakan potensiometer untuk mengatur ambang sensor dan tampilkan status saat nilai melewatinya.", "components": ["Potensiometer Taper", "Sensor Cahaya LDR", "Arduino Uno", "Buzzer"]}
+  ],
+  "Trimmer-Potentiometer": [
+    {"rank": 1, "name": "Kalibrasi ambang sensor cahaya", "description": "Atur ambang komparator atau pembacaan analog secara halus menggunakan trimmer, lalu catat posisi kalibrasinya.", "components": ["Trimmer Potensiometer", "Sensor Cahaya LDR", "LED", "Resistor"]},
+    {"rank": 2, "name": "Kalibrasi kontras LCD karakter", "description": "Gunakan trimmer untuk menyetel kontras modul LCD yang memang menyediakan pin pengaturan tersebut.", "components": ["Trimmer Potensiometer", "LCD Display", "Arduino Uno"]}
+  ],
+  "Water-Sensor": [
+    {"rank": 1, "name": "Alarm kebocoran air meja", "description": "Bunyikan buzzer saat sensor mendeteksi air pada baki uji dan jauhkan bagian elektronik dari area basah.", "components": ["Sensor Air", "Buzzer", "Arduino Uno"]},
+    {"rank": 2, "name": "Indikator ketinggian air sederhana", "description": "Pantau keberadaan air pada beberapa titik sensor dan tampilkan status level secara bertahap.", "components": ["Sensor Air", "Arduino Uno", "LED", "Resistor"]}
+  ],
+  "Zener-Diode": [
+    {"rank": 1, "name": "Demonstrasi referensi tegangan Zener", "description": "Amati tegangan Zener pada rangkaian uji berarus terbatas dengan resistor seri dan rating daya yang benar.", "components": ["Dioda Zener", "Resistor", "Multimeter", "Breadboard / Papan Rangkaian"]},
+    {"rank": 2, "name": "Pembatas tegangan sinyal rendah", "description": "Demonstrasikan clipping sinyal kecil menggunakan diode Zener; jangan menghubungkan langsung ke sumber tanpa pembatas arus.", "components": ["Dioda Zener", "Resistor", "Kapasitor Film"]}
+  ]
+}

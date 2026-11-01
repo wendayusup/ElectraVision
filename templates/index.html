@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#24150d">
+    <title>ElectraVision - Pemindai Komponen Elektronika</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=poppins-font-1">
+</head>
+<body>
+    <header class="header-bar">
+        <div class="brand-section">
+            <div>
+                <h1 class="brand-title">ElectraVision</h1>
+                <p class="brand-desc">Pemindai Komponen Elektronika</p>
+            </div>
+        </div>
+
+        <div class="header-controls">
+            <div class="status-chip inactive" id="scannerStatusChip">
+                <span class="status-indicator-dot" aria-hidden="true"></span>
+                <span>Status kamera: <strong id="scannerStatusLabel">Menunggu</strong></span>
+            </div>
+            <button type="button" class="status-chip inactive" id="modelStatusChip" aria-haspopup="dialog" aria-controls="componentListDialog" aria-expanded="false" disabled>
+                <span class="status-indicator-dot" aria-hidden="true"></span>
+                <span id="modelStatusLabel">Memeriksa model...</span>
+            </button>
+            <div class="device-select-wrap">
+                <label class="label-inline" for="cameraSelect">Kamera</label>
+                <select id="cameraSelect" class="select-field" aria-label="Pilih kamera"></select>
+            </div>
+            <button type="button" class="btn-action" id="flipCameraBtn">Balik tampilan</button>
+            <button type="button" class="btn-action" id="pauseStreamBtn">
+                <span id="pauseBtnText">Jeda</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="scanner-layout">
+        <section class="hero-intro">
+            <p class="hero-eyebrow">PENGENALAN KOMPONEN ELEKTRONIKA</p>
+            <h2>Kenali setiap komponen.<br><span>Lebih mudah.</span></h2>
+            <p class="hero-description">Arahkan kamera ke komponen untuk melihat nama, fungsi, dan informasi pin-nya.</p>
+            <a class="hero-cta" href="#scanner">Mulai memindai <span aria-hidden="true">↓</span></a>
+        </section>
+
+        <section class="scanner-viewport-panel" aria-label="Pemindaian kamera">
+            <div class="viewport-box" id="scanner">
+                <video id="webcam" autoplay playsinline muted></video>
+                <canvas id="overlay" aria-label="Overlay deteksi komponen"></canvas>
+                <div class="viewport-telemetry" aria-live="polite">
+                    <span class="telemetry-badge" id="fpsIndicator">FPS: 0</span>
+                    <span class="telemetry-badge" id="resolutionIndicator">Resolusi: --</span>
+                </div>
+            </div>
+            <p class="camera-error-message" id="cameraErrorMessage" role="status" aria-live="polite" hidden></p>
+        </section>
+
+        <section class="standby-section" id="standbySection">
+            <div class="standby-box">
+                <div class="standby-icon" aria-hidden="true">AI</div>
+                <div class="standby-text">
+                    <h2>Arahkan komponen ke kamera</h2>
+                    <p>Hasil deteksi dan informasi kelas model akan muncul di sini.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="readout-bar-section" id="readoutBarSection" style="display: none;">
+            <div class="readout-bar">
+                <div class="readout-state">
+                    <span class="readout-dot" id="readoutStatusDot" aria-hidden="true"></span>
+                    <div>
+                        <div class="readout-caption">STATUS PEMINDAIAN</div>
+                        <div class="readout-status-text" id="readoutStatusText">MENUNGGU</div>
+                    </div>
+                </div>
+                <div class="readout-main">
+                    <span class="readout-title-label" id="readoutTypeBadge">KOMPONEN TERDETEKSI:</span>
+                    <div class="readout-component-name" id="readoutComponentName">-</div>
+                    <span class="readout-category-badge" id="readoutCategory">Komponen Elektronika</span>
+                </div>
+                <div class="readout-meta">
+                    <div class="meta-box">
+                        <span class="meta-label">CONFIDENCE</span>
+                        <span class="meta-value accent-green" id="readoutConfidence">0%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="details-section" id="detailsSection" style="display: none;">
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h2>Informasi Komponen</h2>
+                </header>
+                <div id="componentDetails" aria-live="polite"></div>
+            </article>
+        </section>
+    </main>
+
+    <dialog class="component-list-dialog" id="componentListDialog" aria-labelledby="componentListTitle">
+        <header class="component-list-header">
+            <div>
+                <h2 id="componentListTitle">Komponen yang dikenali</h2>
+                <p id="componentListSummary"></p>
+            </div>
+            <button type="button" class="component-list-close" id="closeComponentListBtn" aria-label="Tutup daftar komponen">×</button>
+        </header>
+        <p class="component-list-status" id="componentListStatus" role="status" aria-live="polite"></p>
+        <ul class="component-list-items" id="componentListItems" hidden></ul>
+    </dialog>
+
+    <script src="/static/js/main.js?v=component-project-recommendations-1"></script>
+</body>
+</html>
